@@ -1,0 +1,337 @@
+/* =========================================================
+   THOROUGHBRED SYNDICATE — PREMIUM HOMEPAGE OVERRIDES
+   Add this file AFTER the original responsive.css stylesheet.
+   ========================================================= */
+
+:root {
+  --race-green: #18372d;
+  --race-green-deep: #10271f;
+  --race-green-soft: #294b3d;
+  --race-gold: #b99a62;
+  --race-gold-light: #d7c49a;
+  --race-cream: #f7f5ef;
+  --race-paper: #fffefa;
+  --race-ink: #202923;
+  --race-muted: #68736c;
+  --race-line: rgba(24, 55, 45, .13);
+  --race-shadow: 0 18px 45px rgba(18, 39, 31, .10);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 105px; }
+body {
+  color: var(--race-ink);
+  background: var(--race-paper);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+a { transition: color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease; }
+
+/* Header */
+.hs-header { position: relative; z-index: 100; }
+.hs-header .top-bar {
+  background: var(--race-green-deep);
+  color: rgba(255,255,255,.82);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.hs-header .top-bar .phone,
+.hs-header .top-bar .login,
+.hs-header .top-bar .phone a { color: rgba(255,255,255,.86); }
+.hs-header .top-bar svg { max-width: 25px; height: 25px; }
+.hs-header .top-bar .phone i { margin-right: 8px; }
+.hs-header .top-bar .hs-social-media a { color: var(--race-gold-light); }
+.hs-header .top-bar .hs-social-media a:hover { color: #fff; }
+.hs-bottom-bar {
+  background: rgba(255,254,250,.97);
+  box-shadow: 0 8px 25px rgba(20,35,28,.06);
+  backdrop-filter: blur(12px);
+}
+.hs-bottom-bar .bottom-bar-text { min-height: 86px; }
+.hs-bottom-bar .bottom-bar-text > a img { max-height: 58px; width: auto; }
+.hs-navbar .navbar-links { gap: 4px; }
+.hs-navbar .navbar-links > li > a {
+  color: var(--race-green);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: .035em;
+  padding: 14px 13px;
+}
+.hs-navbar .navbar-links > li > a:hover,
+.hs-navbar .navbar-links > li.active > a { color: var(--race-gold); }
+.hs-header .hs-btn,
+.hs-btn,
+.hs-riding-club .hs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 25px;
+  border: 1px solid var(--race-gold);
+  border-radius: 3px;
+  background: var(--race-green);
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(24,55,45,.13);
+}
+.hs-header .hs-btn:hover,
+.hs-btn:hover,
+.hs-riding-club .hs-btn:hover {
+  background: var(--race-gold);
+  border-color: var(--race-gold);
+  color: var(--race-green-deep) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(24,55,45,.18);
+}
+
+/* Hero */
+#top { overflow: hidden; background: var(--race-cream) !important; }
+#top .hs-hero-section-one { padding: 54px 0 70px; }
+#top .hs-hero-one-text { max-width: 650px; padding: 45px 25px 35px 0; }
+#top .hs-hero-one-text h1 {
+  max-width: 650px;
+  margin: 0 0 22px;
+  color: var(--race-green-deep);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5.2vw, 70px);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+#top .hs-hero-one-text p { max-width: 500px; color: #59655d; font-size: 17px; line-height: 1.8; margin-bottom: 30px; }
+#top .hs-hero-section-one-img { position: relative; padding: 12px; }
+#top .hs-hero-section-one-img:before {
+  content: ""; position: absolute; z-index: 0; inset: 0 0 28px 28px;
+  border: 1px solid var(--race-gold); border-radius: 2px;
+}
+#top .hs-hero-section-one-img img {
+  position: relative; z-index: 1; width: 100%; height: 470px;
+  object-fit: cover; border-radius: 2px; box-shadow: var(--race-shadow);
+}
+#top .riders-imgs { display: flex; align-items: center; gap: 22px; padding: 0 0 35px; }
+#top .riders-imgs ul { display: flex; padding: 0; margin: 0; list-style: none; }
+#top .riders-imgs ul li { margin-left: -10px; }
+#top .riders-imgs ul li:first-child { margin-left: 0; }
+#top .riders-imgs ul img { width: 43px; height: 43px; border: 3px solid var(--race-cream); border-radius: 50%; object-fit: cover; }
+#top .riders-imgs h1 { color: var(--race-green); font-size: 14px; font-weight: 700; margin: 0; }
+#top .riders-imgs h1 span { color: var(--race-gold); }
+#top .carousel-arrow { opacity: .85; }
+
+/* General sections and headings */
+.gap { padding-top: 100px; padding-bottom: 100px; }
+.gap.no-top { padding-top: 25px; }
+.hs-heading { margin: 0 auto 48px; text-align: center; }
+.hs-heading > img { display: block; width: 42px; max-height: 34px; object-fit: contain; margin: 0 auto 12px; }
+.hs-heading span {
+  display: inline-block; margin-bottom: 8px; color: var(--race-gold);
+  font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+}
+.hs-heading h2,
+.hs-heading-btn h2 {
+  color: var(--race-green-deep); font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.5vw, 46px); font-weight: 500; line-height: 1.15;
+  letter-spacing: -.025em; margin: 0;
+}
+.hs-heading p { max-width: 620px; margin: 16px auto 0; color: var(--race-muted); }
+
+/* Benefits cards */
+#benefits { background: #fffefa; }
+#benefits .hs-courses {
+  height: 100%; padding: 0 0 28px; overflow: hidden; text-align: center;
+  background: #fff; border: 1px solid var(--race-line); border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(24,55,45,.045); transition: transform .3s ease, box-shadow .3s ease;
+}
+#benefits .hs-courses:hover { transform: translateY(-7px); box-shadow: var(--race-shadow); }
+#benefits .hs-courses figure { overflow: hidden; margin: 0 0 24px; }
+#benefits .hs-courses figure img { width: 100%; height: 230px; object-fit: cover; transition: transform .5s ease; }
+#benefits .hs-courses:hover figure img { transform: scale(1.05); }
+#benefits .hs-courses > i { display: inline-flex; width: 58px; height: 58px; align-items: center; justify-content: center; margin: -52px auto 15px; position: relative; background: var(--race-cream); border: 4px solid #fff; border-radius: 50%; }
+#benefits .hs-courses > i svg { width: 31px; height: 31px; }
+#benefits .hs-courses h3 { margin: 4px 18px 10px; font-family: Georgia,serif; font-size: 23px; font-weight: 500; }
+#benefits .hs-courses h3 a { color: var(--race-green); }
+#benefits .hs-courses p { margin: 0 24px; color: var(--race-muted); font-size: 14px; }
+
+/* About */
+#about { background: var(--race-paper); }
+#about .hs-horse-club-img { gap: 12px; }
+#about .hs-horse-club-img img { width: 100%; height: 190px; object-fit: cover; border-radius: 3px; }
+#about .hs-heading.two { text-align: left; }
+#about .hs-heading.two h2 { max-width: 560px; }
+#about .hs-heading.two p { margin-left: 0; }
+#about .hs-awards { border-top: 1px solid var(--race-line); padding: 18px 0; }
+#about .hs-awards h3,
+#about .hs-awards h4 { color: var(--race-green); }
+#about .hs-count-style { color: var(--race-green); }
+
+/* Horse profiles */
+#horses { background: var(--race-cream) !important; }
+#horses .hs-riding-trainer {
+  height: 100%; overflow: hidden; background: #fff; border: 1px solid var(--race-line);
+  border-radius: 4px; box-shadow: 0 10px 28px rgba(24,55,45,.06);
+}
+#horses .hs-riding-trainer figure { overflow: hidden; margin: 0; }
+#horses .hs-riding-trainer figure img { width: 100%; height: 300px; object-fit: cover; transition: transform .5s ease; }
+#horses .hs-riding-trainer:hover figure img { transform: scale(1.04); }
+#horses .hs-riding-trainer h3 { color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+#horses .hs-riding-trainer p { color: var(--race-muted); font-size: 14px; }
+
+/* Dark membership callout */
+.hs-riding-club {
+  position: relative; overflow: hidden; color: #fff;
+  background-color: var(--race-green-deep) !important;
+  background-position: center; background-size: cover;
+}
+.hs-riding-club:before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(12,35,27,.94),rgba(12,35,27,.72)); }
+.hs-riding-club .container { position: relative; z-index: 1; }
+.hs-riding-club .hs-riding-club-text h2,
+.hs-riding-club .hs-riding-club-text h3 { color: #fff; font-family: Georgia,serif; font-weight: 500; }
+.hs-riding-club .hs-riding-club-text p { color: rgba(255,255,255,.78); }
+.hs-riding-club .hs-riding-club-img img { border: 5px solid rgba(215,196,154,.45); border-radius: 50%; }
+.hs-riding-club .hs-count-style-two { color: #fff; }
+.hs-riding-club .hs-count-style-two span { color: var(--race-gold-light); }
+
+/* Services */
+#services { background: #fffefa; }
+#services .hs-heading { margin-bottom: 42px; }
+#services .hs-service,
+#services .hs-services,
+#services .service-box { border-color: var(--race-line); }
+#services h3 { color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+#services p { color: var(--race-muted); }
+
+/* Upcoming racing timeline */
+#racing { background: #fff; }
+#racing .hs-heading-btn { margin-bottom: 35px; }
+#racing .hs-every { border-bottom: 1px solid var(--race-line); padding: 24px 0; }
+#racing .hs-every h3,
+#racing .hs-every h4 { color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+#racing .hs-every p,
+#racing .hs-every-time { color: var(--race-muted); }
+#racing .hs-every-img img { width: 100%; max-height: 260px; object-fit: cover; border-radius: 4px; }
+#racing .hs-heading-contact { border: 1px solid var(--race-line); border-radius: 4px; padding: 14px 20px; }
+
+/* Membership cards */
+#membership { background: var(--race-cream) !important; }
+#membership .hs-plans-price {
+  height: 100%; padding: 35px 28px; background-color: #fff !important;
+  border: 1px solid var(--race-line); border-radius: 4px; box-shadow: 0 10px 28px rgba(24,55,45,.05);
+}
+#membership .hs-plans-price.two {
+  background-color: var(--race-green) !important; color: #fff;
+  background-blend-mode: multiply; border-color: var(--race-green);
+}
+#membership .hs-plans-price h3,
+#membership .hs-plans-price h2 { color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+#membership .hs-plans-price.two h3,
+#membership .hs-plans-price.two h2,
+#membership .hs-plans-price.two p,
+#membership .hs-plans-price.two li { color: #fff; }
+#membership .hs-plans-price .hs-list { padding-left: 0; list-style: none; }
+#membership .hs-plans-price .hs-list li { padding: 8px 0; border-bottom: 1px solid var(--race-line); color: var(--race-muted); }
+#membership .hs-plans-price.two .hs-list li { border-color: rgba(255,255,255,.15); }
+
+/* Gallery */
+#gallery { background: #fffefa; }
+#gallery img { border-radius: 3px; }
+#gallery .hs-heading.two { text-align: left; }
+#gallery .hs-heading.two p { margin-left: 0; }
+
+/* News cards */
+#updates { background: #fff; }
+#updates .hs-blog { height: 100%; overflow: hidden; background: #fff; border: 1px solid var(--race-line); border-radius: 4px; box-shadow: 0 10px 28px rgba(24,55,45,.05); }
+#updates .hs-blog-img { overflow: hidden; }
+#updates .hs-blog-img img { width: 100%; height: 230px; object-fit: cover; transition: transform .5s ease; }
+#updates .hs-blog:hover .hs-blog-img img { transform: scale(1.05); }
+#updates .hs-blog-text { padding: 22px; }
+#updates .hs-blog-text h3,
+#updates .hs-blog-text h4 { color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+#updates .hs-blog-text p { color: var(--race-muted); font-size: 14px; }
+
+/* Footer */
+footer {
+  position: relative; overflow: hidden; color: rgba(255,255,255,.78);
+  background-color: var(--race-green-deep) !important; background-position: center; background-size: cover;
+}
+footer:before { content: ""; position: absolute; inset: 0; background: rgba(12,35,27,.94); }
+footer .container { position: relative; z-index: 1; }
+footer h3, footer h4, footer .widget-title h3 { color: #fff; font-family: Georgia,serif; font-weight: 500; }
+footer a { color: rgba(255,255,255,.78); }
+footer a:hover { color: var(--race-gold-light); }
+footer .copyright { border-top: 1px solid rgba(255,255,255,.16); }
+footer .copyright p { color: rgba(255,255,255,.65); }
+footer .get-in-touch svg path { fill: var(--race-gold-light); }
+footer input[type="email"] { min-height: 48px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.09); color: #fff; }
+footer input[type="email"]::placeholder { color: rgba(255,255,255,.65); }
+
+/* Enquiry popup and form */
+.quote-popup { z-index: 9999; }
+.quote-popup .popup-form { overflow: hidden; border-radius: 6px; box-shadow: 0 25px 70px rgba(0,0,0,.25); }
+.quote-popup .popup-form > .row > div:first-child img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
+.quote-popup .form-field { padding: 35px; background: var(--race-paper); }
+.quote-popup .form-field h2 { margin-bottom: 25px; color: var(--race-green); font-family: Georgia,serif; font-weight: 500; }
+.quote-popup .form-field input,
+.quote-popup .form-field textarea,
+.quote-popup .form-field select,
+.quote-popup .form-field .nice-select {
+  width: 100%; min-height: 49px; margin-bottom: 14px; padding: 12px 15px;
+  border: 1px solid var(--race-line); border-radius: 3px; background: #fff; color: var(--race-ink);
+}
+.quote-popup .form-field textarea { min-height: 105px; resize: vertical; }
+.quote-popup .form-field input:focus,
+.quote-popup .form-field textarea:focus { outline: none; border-color: var(--race-gold); box-shadow: 0 0 0 3px rgba(185,154,98,.13); }
+.quote-popup .close-popup { color: var(--race-green); }
+
+/* Utility polish */
+::selection { color: #fff; background: var(--race-green); }
+:focus-visible { outline: 2px solid var(--race-gold); outline-offset: 3px; }
+#progress { background: var(--race-gold); }
+#progress #progress-value { color: var(--race-green-deep); }
+
+/* Tablet */
+@media (max-width: 991px) {
+  .gap { padding-top: 75px; padding-bottom: 75px; }
+  #top .hs-hero-section-one { padding: 35px 0 55px; }
+  #top .hs-hero-one-text { padding: 20px 0 30px; }
+  #top .hs-hero-section-one-img img { height: 390px; }
+  .hs-bottom-bar .bottom-bar-text { min-height: 75px; }
+  #horses .hs-riding-trainer figure img { height: 270px; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .gap { padding-top: 58px; padding-bottom: 58px; }
+  .gap.no-top { padding-top: 10px; }
+  .hs-header .top-bar .top-bar-slid { padding: 8px 0; }
+  .hs-header .top-bar .phone-data { flex-wrap: wrap; gap: 5px 15px; }
+  .hs-header .top-bar .phone { font-size: 11px; }
+  .hs-bottom-bar .bottom-bar-text { min-height: 68px; }
+  .hs-bottom-bar .bottom-bar-text > a img { max-height: 48px; }
+  .hs-header .hs-btn { min-height: 42px; padding: 9px 13px; font-size: 10px; }
+  #top .hs-hero-section-one { padding: 22px 0 35px; }
+  #top .hs-hero-one-text { padding: 15px 0 25px; text-align: center; }
+  #top .hs-hero-one-text h1 { font-size: clamp(36px, 10vw, 49px); }
+  #top .hs-hero-one-text p { margin-left: auto; margin-right: auto; font-size: 15px; }
+  #top .hs-hero-section-one-img { margin-top: 12px; }
+  #top .hs-hero-section-one-img img { height: 300px; }
+  #top .riders-imgs { justify-content: center; flex-wrap: wrap; text-align: center; padding-bottom: 25px; }
+  #top .riders-imgs h1 { width: 100%; }
+  .hs-heading { margin-bottom: 32px; }
+  .hs-heading h2, .hs-heading-btn h2 { font-size: 33px; }
+  #benefits .hs-courses { margin-bottom: 22px; }
+  #benefits .hs-courses figure img { height: 220px; }
+  #about .hs-horse-club-img img { height: 135px; }
+  #horses .hs-riding-trainer { margin-bottom: 22px; }
+  #horses .hs-riding-trainer figure img { height: 280px; }
+  .hs-riding-club .hs-riding-club-img { margin-top: 25px; }
+  #membership .hs-plans-price { margin-bottom: 20px; }
+  #updates .hs-blog { margin-bottom: 22px; }
+  .quote-popup .popup-form > .row > div:first-child img { min-height: 210px; max-height: 240px; }
+  .quote-popup .form-field { padding: 24px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
